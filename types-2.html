@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Elmos Automation</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- === HEADER === -->
+        <header class="header">
+            <div class="container">
+                <div class="header__top splitter">
+                    <a class="header__logolink" href="/">
+                        <img class="header__logo" src="images/logo.svg" loading="lazy" alt="logo">
+                    </a>
+
+                    <div class="header__content">
+                        <div class="header__search">
+                            <input type="text" name="site_search" placeholder="Пластиковые трубопроводы">
+                            <button class="header__button">
+                                <img src="images/search-icon.svg" loading="lazy" alt="search icon">
+                            </button>
+                        </div>
+
+                        <div class="header__right">
+                            <div class="header__end">
+                                <a class="header__phone" href="tel:+79999999999">+7 (999) 999 99 99</a>
+                                <div class="header__time">пн-пт 9:00 - 18:00</div>
+                            </div>
+
+                            <a class="header__trigger getModal" href="#mobileMenu">
+                                <img src="images/catalog-icon.svg" loading="lazy" alt="catalog icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="header__main splitter">
+                        <div class="header__catalog">
+                            <button class="header__btn">
+                                <img src="images/catalog-icon.svg" loading="lazy" alt="catalog icon">
+                                Каталог
+                            </button>
+                            <ul class="header__dropdown">
+                                <li>
+                                    <a href="#">
+                                        <img src="images/catalog-1.webp" loading="lazy" alt="catalog icon">
+                                        Шкафы управления
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/catalog-2.webp" loading="lazy" alt="catalog icon">
+                                        Распределители и клапаны
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/catalog-3.webp" loading="lazy" alt="catalog icon">
+                                        Дроссели
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/catalog-4.webp" loading="lazy" alt="catalog icon">
+                                        Подготовка воздуха
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/catalog-5.webp" loading="lazy" alt="catalog icon">
+                                        Фитинги
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/catalog-6.webp" loading="lazy" alt="catalog icon">
+                                        Датчики, реле
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/catalog-7.webp" loading="lazy" alt="catalog icon">
+                                        Пропорциональная техника
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/catalog-8.webp" loading="lazy" alt="catalog icon">
+                                        Пластиковые трубопроводы
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/catalog-9.webp" loading="lazy" alt="catalog icon">
+                                        Пневмоцилиндры
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/catalog-10.webp" loading="lazy" alt="catalog icon">
+                                        Электрические компоненты
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="header__list">
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Сервис и поддержка</a></li>
+                            <li><a href="#">Склады и производство</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- ==== MAIN CONTENT ==== -->
+        <main class="main">
+            <div class="container">
+                <div class="splitter">
+                    <div class="empty"></div>
+
+                    <div class="content">
+                        <!-- === BREADCRUMBS === -->
+                        <div class="breadcrumbs">
+                            <div class="breadcrumbs__inner">
+                                <a class="breadcrumbs__link" href="#">Главная</a>
+                                <div class="breadcrumbs__current">Датчики и реле</div>
+                            </div>
+                        </div>
+
+                        <!-- === CARDS === -->
+                        <section class="cards spacing">
+                            <h2 class="title mb">Датчики и реле</h2>
+                            <div class="cards__tabs topline">
+                                <a class="cards__tab active" href="#">
+                                    <img src="images/cards-3.webp" loading="lazy" alt="cards img">
+                                </a>
+
+                                <a class="cards__tab" href="#">
+                                    <img src="images/cards-4.webp" loading="lazy" alt="cards img">
+                                </a>
+                            </div>
+                            <div class="cards__filter">
+                                <select name="filter">
+                                    <option selected value="" disabled>Фильтр</option>
+                                    <option value="filter1">Фильтр 1</option>
+                                    <option value="filter2">Фильтр 2</option>
+                                    <option value="filter3">Фильтр 3</option>
+                                </select>
+
+                                <select name="sort">
+                                    <option selected value="" disabled>Сортировка</option>
+                                    <option value="sort1">Сортировка 1</option>
+                                    <option value="sort2">Сортировка 2</option>
+                                    <option value="sort3">Сортировка 3</option>
+                                </select>
+                            </div>
+
+                            <div class="tabs__content active">
+                                <div class="tabs__wrapper">
+                                    <div class="cards__inner">
+                                        <a class="cards__item" href="#">
+                                            <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
+                                            <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
+                                            <div class="cards__bottom">
+                                                <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
+                                                <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                            </div>
+                                        </a>
+
+                                        <a class="cards__item" href="#">
+                                            <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
+                                            <h3 class="cards__name">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit.
+                                                Sequi excepturi quasi temporibus, rerum voluptatibus in maxime nobis.
+                                                Temporibus?</h3>
+                                            <div class="cards__bottom">
+                                                <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
+                                                <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                            </div>
+                                        </a>
+
+                                        <a class="cards__item" href="#">
+                                            <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
+                                            <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
+                                            <div class="cards__bottom">
+                                                <div class="cards__details">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing elit. Ullam, non itaque quae cupiditate ducimus ab
+                                                    minima
+                                                    possimus doloribus at? Laboriosam!</div>
+                                                <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                            </div>
+                                        </a>
+
+                                        <a class="cards__item" href="#">
+                                            <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
+                                            <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
+                                            <div class="cards__bottom">
+                                                <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
+                                                <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                            </div>
+                                        </a>
+
+                                        <a class="cards__item" href="#">
+                                            <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
+                                            <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
+                                            <div class="cards__bottom">
+                                                <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
+                                                <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                            </div>
+                                        </a>
+
+                                        <a class="cards__item" href="#">
+                                            <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
+                                            <h3 class="cards__name">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                elit.
+                                                Sequi excepturi quasi temporibus, rerum voluptatibus in maxime nobis.
+                                                Temporibus?</h3>
+                                            <div class="cards__bottom">
+                                                <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
+                                                <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                            </div>
+                                        </a>
+
+                                        <a class="cards__item" href="#">
+                                            <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
+                                            <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
+                                            <div class="cards__bottom">
+                                                <div class="cards__details">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing elit. Ullam, non itaque quae cupiditate ducimus ab
+                                                    minima
+                                                    possimus doloribus at? Laboriosam!</div>
+                                                <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                            </div>
+                                        </a>
+
+                                        <a class="cards__item" href="#">
+                                            <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
+                                            <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
+                                            <div class="cards__bottom">
+                                                <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
+                                                <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tabs__content">
+                                <div class="tabs__wrapper">
+                                    <div class="cards__inner">
+
+                                        <a class="cards__item" href="#">
+                                            <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
+                                            <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
+                                            <div class="cards__bottom">
+                                                <div class="cards__details">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing elit. Ullam, non itaque quae cupiditate ducimus ab
+                                                    minima
+                                                    possimus doloribus at? Laboriosam!</div>
+                                                <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                            </div>
+                                        </a>
+
+                                        <a class="cards__item" href="#">
+                                            <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
+                                            <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
+                                            <div class="cards__bottom">
+                                                <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
+                                                <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- === PAGINATION === -->
+                            <nav class="navigation pagination mt">
+                                <div class="nav-links">
+                                    <ul class="page-numbers">
+                                        <li><span aria-current="page" class="current">1</span></li>
+                                        <li>
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">4</a>
+                                        </li>
+                                        <li><span class="dots">…</span></li>
+                                        <li><a href="#">20</a></li>
+                                        <li>
+                                            <a class="next" href="#">
+                                                <svg width="11" height="19" viewBox="0 0 11 19" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.25 1.5L9.25 9.5L1.25 17.5" stroke="#6E7C87"
+                                                        stroke-width="2" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </section>
+
+                        <!-- === CONTACT === -->
+                        <section class="contact spacing topline">
+                            <div class="contact__inner">
+                                <!-- === КАРТА === -->
+                                <div id="contactMap" class="contact__map"></div>
+
+                                <div class="contact__content">
+                                    <h2 class="title">Контакты</h2>
+                                    <p class="contact__text">Компания Elmos Werkzeuge GmbH вышла на немецкий рынок в
+                                        1984 году. </p>
+                                    <div class="contact__lines">
+                                        <div class="contact__line">
+                                            <img src="images/phone.svg" loading="lazy" alt="contact icon">
+                                            <a class="contact__bold" href="tel:+7(999)9999999">+7 (999) 999 99
+                                                99</a>
+                                        </div>
+
+                                        <div class="contact__line">
+                                            <img src="images/mail.svg" loading="lazy" alt="contact icon">
+                                            <a class="contact__bold" href="mailto:mygmail.com">mygmail.com</a>
+                                        </div>
+
+                                        <div class="contact__line">
+                                            <img src="images/location.svg" loading="lazy" alt="contact icon">
+                                            <div class="contact__bold">Адрес который очень важен</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- === FOOTER === -->
+        <footer class="footer">
+            <div class="container">
+                <div class="splitter">
+                    <div class="empty"></div>
+
+                    <div class="footer__main">
+                        <div class="footer__head">
+                            <a class="footer__logolink" href="/">
+                                <img class="footer__logo" src="images/logo-white.svg" loading="lazy" alt="footer logo">
+                            </a>
+
+                            <a class="btn btn_red getModal" href="#modal">Связаться с нами</a>
+                        </div>
+
+                        <ul class="footer__list">
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Сервис и поддержка</a></li>
+                            <li><a href="#">Склады и производство</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+
+                        <div class="footer__bottom">
+                            <div class="footer__grey">© 2024, ElmosAutomation </div>
+                            <a class="footer__grey" href="#">Политика обработки персональных данных</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- === MODAL === -->
+    <div id="modal" class="modal">
+        <div class="modal__inner">
+            <h3 class="modal__title">Оставить заявку</h3>
+            <p class="modal__text">Оставьте свои контактные данные и наш менеджер свяжется с вами в ближайшее время и
+                проведет бесплатную консультацию</p>
+            <button class="modal__close">
+                <img src="images/x-grey.svg" loading="lazy" alt="x icon">
+            </button>
+            <form class="form">
+                <input type="text" name="fullname" placeholder="Ваше имя">
+                <input type="tel" name="phone" placeholder="Номер телефона">
+                <button class="btn btn_red" type="submit">Отправить заявку</button>
+                <label class="form__confirm">
+                    <input type="checkbox" checked>
+                    <span class="form__policy">
+                        Нажимая на кнопку отправить, вы соглашаетесь
+                        с <a href="#">политикой конфиденциальности</a> сайта
+                    </span>
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <!-- === MOBILE MENU === -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__head">
+                <a class="mobile-menu__logo" href="/">
+                    <img src="images/logo-white.svg" loading="lazy" alt="logo">
+                </a>
+                <button class="mobile-menu__close">
+                    <img src="images/x-white.svg" loading="lazy" alt="x icon">
+                </button>
+            </div>
+
+            <ul class="mobile-menu__list">
+
+                <li><a href="#">Главная</a></li>
+                <li>
+                    <a href="#">Каталог</a>
+                    <img src="images/arrow-down-white.svg" loading="lazy" alt="arrow down">
+                    <ul class="header__dropdown">
+                        <li>
+                            <a href="#">
+                                <img src="images/catalog-1.webp" loading="lazy" alt="catalog icon">
+                                Шкафы управления
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/catalog-2.webp" loading="lazy" alt="catalog icon">
+                                Распределители и клапаны
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/catalog-3.webp" loading="lazy" alt="catalog icon">
+                                Дроссели
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/catalog-4.webp" loading="lazy" alt="catalog icon">
+                                Подготовка воздуха
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/catalog-5.webp" loading="lazy" alt="catalog icon">
+                                Фитинги
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/catalog-6.webp" loading="lazy" alt="catalog icon">
+                                Датчики, реле
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/catalog-7.webp" loading="lazy" alt="catalog icon">
+                                Пропорциональная техника
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/catalog-8.webp" loading="lazy" alt="catalog icon">
+                                Пластиковые трубопроводы
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/catalog-9.webp" loading="lazy" alt="catalog icon">
+                                Пневмоцилиндры
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/catalog-10.webp" loading="lazy" alt="catalog icon">
+                                Электрические компоненты
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Сервис и поддержка</a></li>
+                <li><a href="#">Склады и производство</a></li>
+                <li><a href="#">Контакты</a></li>
+                </li>
+            </ul>
+
+            <a class="btn btn_red getModal" href="#modal">Отправить заявку</a>
+        </div>
+    </div>
+
+    <!-- === SCRIPTS === -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=fd996bf6-11fe-4079-a1e2-5c6efd7723af&lang=ru_RU"
+        type="text/javascript"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
