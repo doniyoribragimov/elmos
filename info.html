@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="header__top splitter">
                     <a class="header__logolink" href="/">
-                        <img class="header__logo" src="images/logo.svg" loading="lazy" alt="logo">
+                        <img class="header__logo" src="images/logo-white.svg" loading="lazy" alt="logo">
                     </a>
 
                     <div class="header__content">
@@ -25,6 +25,9 @@
                             <input type="text" name="site_search" placeholder="Пластиковые трубопроводы">
                             <button class="header__button">
                                 <img src="images/search-icon.svg" loading="lazy" alt="search icon">
+                            </button>
+                            <button id="closeSearch" class="header__close">
+                                <img src="images/x-white.svg" loading="lazy" alt="search icon">
                             </button>
                         </div>
 
@@ -38,7 +41,11 @@
                                 <img src="images/catalog-icon.svg" loading="lazy" alt="catalog icon">
                             </a>
                         </div>
+
                     </div>
+                    <button id="openSearch" class="header__open">
+                        <img src="images/search-icon.svg" alt="search icon">
+                    </button>
                 </div>
             </div>
             <div class="header__bottom">
@@ -112,14 +119,23 @@
                                 </li>
                             </ul>
                         </div>
-                        <ul class="header__list">
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">Новости</a></li>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Сервис и поддержка</a></li>
-                            <li><a href="#">Склады и производство</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
+                        <div class="header__whole">
+                            <ul class="header__list">
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+
+                            <div class="header__other">
+                                <a class="header__mail" href="mailto:pneuvel@ya.ru">pneuvel@ya.ru</a>
+                                <a class="header__cart" href="#">
+                                    <img src="images/cart.svg" alt="cart">
+                                    <div class="header__badge">0</div>
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -152,13 +168,11 @@
                                     <p class="info__text">Таким образом, существующая теория позволяет выполнить важные
                                         задания по разработке кластеризации усилий.</p>
                                 </div>
-                                <img class="info__graph" src="images/graph.webp" loading="lazy" alt="card img">
                             </div>
 
                             <div class="tabs topline">
                                 <a class="tabs__item active" href="#">Описание</a>
                                 <a class="tabs__item" href="#">Документы</a>
-                                <a class="tabs__item" href="#">Вопросы</a>
                             </div>
 
                             <div class="tabs__content active">
@@ -191,91 +205,72 @@
                                     </ul>
                                 </div>
                             </div>
+                        </section>
 
-                            <div class="tabs__content">
-                                <div class="tabs__wrapper">
-                                    <ul class="info__list">
-                                        <li><strong>Установка:</strong>  Т - образная или V - образная канавка</li>
-                                        <li><strong>Варианты датчиков:</strong>  герконовый, датчик Холла,
-                                            магниторезистивный</li>
-                                    </ul>
+                        <section class="lines spacing topline">
+                            <div class="lines__items">
+                                <div class="lines__item">
+                                    <img class="lines__img" src="images/card-img.webp" alt="card img">
+                                    <div class="lines__main">
+                                        <h3 class="lines__title">Адаптер для датчика S-CST-45N1</h3>
+                                        <p class="lines__text">Таким образом, существующая теория позволяет выполнить
+                                            важные задания по разработке кластеризации усилий.</p>
+                                    </div>
+                                    <div class="lines__acts">
+                                        <div class="lines__price">2 785 ₽</div>
+                                        <div class="info__acts">
+                                            <button class="info__but info__minus">-</button>
+                                            <div class="info__number">0</div>
+                                            <button class="info__but info__plus">+</button>
+                                        </div>
+                                        <div class="lines__btns">
+                                            <a class="btn btn_red" href="#">В корзину</a>
+                                            <a class="btn btn_redline" href="#">Подробнее</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="table__wrapper mt">
-                                <table cellspacing="0">
-                                    <tr>
-                                        <td>Название</td>
-                                        <td>Серия</td>
-                                        <td>Серия</td>
-                                        <td>Серия</td>
-                                        <td></td>
-                                    </tr>
+                                <div class="lines__item">
+                                    <img class="lines__img" src="images/card-img.webp" alt="card img">
+                                    <div class="lines__main">
+                                        <h3 class="lines__title">Адаптер для датчика S-CST-45N1</h3>
+                                        <p class="lines__text">Таким образом, существующая теория позволяет выполнить
+                                            важные задания по разработке кластеризации усилий.</p>
+                                    </div>
+                                    <div class="lines__acts">
+                                        <div class="lines__price">2 785 ₽</div>
+                                        <div class="info__acts">
+                                            <button class="info__but info__minus">-</button>
+                                            <div class="info__number">0</div>
+                                            <button class="info__but info__plus">+</button>
+                                        </div>
+                                        <div class="lines__btns">
+                                            <a class="btn btn_red" href="#">В корзину</a>
+                                            <a class="btn btn_redline" href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                    <tr>
-                                        <td>Адаптер для датчика S-CST-45N1</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>
-                                            <div class="info__acts">
-                                                <button class="info__but info__minus">-</button>
-                                                <div class="info__number">0</div>
-                                                <button class="info__but info__plus">+</button>
-                                            </div>
-
-                                            <a class="info__red" href="#">В корзину</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Адаптер для датчика S-CST-45N1</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>
-                                            <div class="info__acts">
-                                                <button class="info__but">-</button>
-                                                <div class="info__number">0</div>
-                                                <button class="info__but">+</button>
-                                            </div>
-
-                                            <a class="info__red" href="#">В корзину</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Адаптер для датчика S-CST-45N1</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>
-                                            <div class="info__acts">
-                                                <button class="info__but">-</button>
-                                                <div class="info__number">0</div>
-                                                <button class="info__but">+</button>
-                                            </div>
-
-                                            <a class="info__red" href="#">В корзину</a>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Адаптер для датчика S-CST-45N1</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>Серия CST-CSV-CSH</td>
-                                        <td>
-                                            <div class="info__acts">
-                                                <button class="info__but">-</button>
-                                                <div class="info__number">0</div>
-                                                <button class="info__but">+</button>
-                                            </div>
-
-                                            <a class="info__red" href="#">В корзину</a>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <div class="lines__item">
+                                    <img class="lines__img" src="images/card-img.webp" alt="card img">
+                                    <div class="lines__main">
+                                        <h3 class="lines__title">Адаптер для датчика S-CST-45N1</h3>
+                                        <p class="lines__text">Таким образом, существующая теория позволяет выполнить
+                                            важные задания по разработке кластеризации усилий.</p>
+                                    </div>
+                                    <div class="lines__acts">
+                                        <div class="lines__price">2 785 ₽</div>
+                                        <div class="info__acts">
+                                            <button class="info__but info__minus">-</button>
+                                            <div class="info__number">0</div>
+                                            <button class="info__but info__plus">+</button>
+                                        </div>
+                                        <div class="lines__btns">
+                                            <a class="btn btn_red" href="#">В корзину</a>
+                                            <a class="btn btn_redline" href="#">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
 
@@ -287,24 +282,55 @@
 
                                 <div class="contact__content">
                                     <h2 class="title">Контакты</h2>
-                                    <p class="contact__text">Компания Elmos Werkzeuge GmbH вышла на немецкий рынок в
-                                        1984 году. </p>
-                                    <div class="contact__lines">
-                                        <div class="contact__line">
-                                            <img src="images/phone.svg" loading="lazy" alt="contact icon">
-                                            <a class="contact__bold" href="tel:+7(999)9999999">+7 (999) 999 99
-                                                99</a>
+
+                                    <div class="contact__main">
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Адрес склада и самовывоза </h4>
+                                            <div class="contact__line">
+                                                <img src="images/location.svg" loading="lazy" alt="contact icon">
+                                                <div class="contact__bold">г.Москва Ярославское шоссе 1с1</div>
+                                            </div>
                                         </div>
 
-                                        <div class="contact__line">
-                                            <img src="images/mail.svg" loading="lazy" alt="contact icon">
-                                            <a class="contact__bold" href="mailto:mygmail.com">mygmail.com</a>
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Режим работы</h4>
+                                            <div class="contact__line">
+                                                <img src="images/time.svg" loading="lazy" alt="contact icon">
+                                                <div class="contact__bold">пн-пт 9:00-16:00 <br>
+                                                    сб-вс выходной</div>
+                                            </div>
+
+                                            <div class="contact__warn"><span>Обратите внимание:</span>все посещения
+                                                только при согласовании с менеджером. </div>
                                         </div>
 
-                                        <div class="contact__line">
-                                            <img src="images/location.svg" loading="lazy" alt="contact icon">
-                                            <div class="contact__bold">Адрес который очень важен</div>
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Контактные данные</h4>
+                                            <div class="contact__line">
+                                                <img src="images/phone.svg" loading="lazy" alt="contact icon">
+                                                <a class="contact__bold" href="tel:+7(999)9999999">+7 (999) 999 99
+                                                    99</a>
+                                            </div>
                                         </div>
+
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Мессенджеры</h4>
+                                            <div class="contact__two">
+                                                <div class="contact__line">
+                                                    <img src="images/tgs.svg" loading="lazy" alt="contact icon">
+                                                    <a class="contact__bold" href="#">Telegram</a>
+                                                </div>
+
+                                                <div class="contact__line">
+                                                    <img src="images/whs.svg" loading="lazy" alt="contact icon">
+                                                    <a class="contact__bold" href="#">WhatsApp</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact__bottom">
+                                        Запрос на подбор комплектующих и оформление заказа можно отправлять на почту <a
+                                            href="mailto:pneuvel@ya.ru">pneuvel@ya.ru</a>
                                     </div>
                                 </div>
                             </div>
@@ -463,6 +489,10 @@
 
             <a class="btn btn_red getModal" href="#modal">Отправить заявку</a>
         </div>
+    </div>
+
+    <div class="copied">
+        Скопирано!
     </div>
 
     <!-- === SCRIPTS === -->

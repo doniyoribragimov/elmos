@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="header__top splitter">
                     <a class="header__logolink" href="/">
-                        <img class="header__logo" src="images/logo.svg" loading="lazy" alt="logo">
+                        <img class="header__logo" src="images/logo-white.svg" loading="lazy" alt="logo">
                     </a>
 
                     <div class="header__content">
@@ -25,6 +25,9 @@
                             <input type="text" name="site_search" placeholder="Пластиковые трубопроводы">
                             <button class="header__button">
                                 <img src="images/search-icon.svg" loading="lazy" alt="search icon">
+                            </button>
+                            <button id="closeSearch" class="header__close">
+                                <img src="images/x-white.svg" loading="lazy" alt="search icon">
                             </button>
                         </div>
 
@@ -38,7 +41,11 @@
                                 <img src="images/catalog-icon.svg" loading="lazy" alt="catalog icon">
                             </a>
                         </div>
+
                     </div>
+                    <button id="openSearch" class="header__open">
+                        <img src="images/search-icon.svg" alt="search icon">
+                    </button>
                 </div>
             </div>
             <div class="header__bottom">
@@ -112,14 +119,23 @@
                                 </li>
                             </ul>
                         </div>
-                        <ul class="header__list">
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">Новости</a></li>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Сервис и поддержка</a></li>
-                            <li><a href="#">Склады и производство</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
+                        <div class="header__whole">
+                            <ul class="header__list">
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+
+                            <div class="header__other">
+                                <a class="header__mail" href="mailto:pneuvel@ya.ru">pneuvel@ya.ru</a>
+                                <a class="header__cart" href="#">
+                                    <img src="images/cart.svg" alt="cart">
+                                    <div class="header__badge">0</div>
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,10 +155,9 @@
                             <div class="view__slider swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <div class="view__item" style="background-image: url(images/view-img.webp);">
-                                            <h1 class="view__title">Распределители и клапаны</h1>
-                                            <p class="view__text">А также явные признаки победы институционализации
-                                                набирают популярность среди определенных слоев.</p>
+                                        <div class="view__item" style="background-image: url(images/main-img.webp);">
+                                            <h1 class="view__title">Пневматические комплектующие <span>Elmos и Camozzi</span></h1>
+                                            <p class="view__text">Подбираем доступные и надежные аналоги</p>
                                             <a class="btn btn_red" href="#">В каталог</a>
                                         </div>
                                     </div>
@@ -262,52 +277,13 @@
                                 </a>
 
                                 <a class="brands__item" href="#">
-                                    <img class="brands__img" src="images/brands.svg" loading="lazy" alt="brands img">
+                                    <img class="brands__img" src="images/brands-2.svg" loading="lazy" alt="brands img">
                                 </a>
 
                                 <a class="brands__item" href="#">
-                                    <img class="brands__img" src="images/brands.svg" loading="lazy" alt="brands img">
+                                    <img class="brands__img" src="images/brands-3.svg" loading="lazy" alt="brands img">
                                 </a>
 
-                                <a class="brands__item" href="#">
-                                    <img class="brands__img" src="images/brands.svg" loading="lazy" alt="brands img">
-                                </a>
-
-                                <a class="brands__item" href="#">
-                                    <img class="brands__img" src="images/brands.svg" loading="lazy" alt="brands img">
-                                </a>
-
-                                <a class="brands__item" href="#">
-                                    <img class="brands__img" src="images/brands.svg" loading="lazy" alt="brands img">
-                                </a>
-
-                                <a class="brands__item" href="#">
-                                    <img class="brands__img" src="images/brands.svg" loading="lazy" alt="brands img">
-                                </a>
-
-                                <a class="brands__item" href="#">
-                                    <img class="brands__img" src="images/brands.svg" loading="lazy" alt="brands img">
-                                </a>
-                            </div>
-                        </section>
-
-                        <!-- === COMPANY === -->
-                        <section class="company spacing topline">
-                            <div class="company__inner">
-                                <img class="company__img" src="images/company-img.webp" loading="lazy" alt="company img">
-                                <div class="company__content">
-                                    <h2 class="title">О компании</h2>
-                                    <div class="company__main">
-                                        <p class="company__text">Компания Elmos Werkzeuge GmbH вышла на немецкий рынок в
-                                            1984 году. Под брендом Elmos потребителю был представлен широкий ассортимент
-                                            инструментов — плиткорезы, фрезера, пилы, автомойки, краскораспылители,
-                                            электродрели и пр. Благодаря разнообразию и высокому качеству продукции,
-                                            основному акценту на разработке и создании профессиональных моделей,
-                                            компания достаточно быстро стала в один ряд с ведущими конкурентно
-                                            способными производителями.</p>
-                                        <a class="btn btn_outline" href="#">Подробнее</a>
-                                    </div>
-                                </div>
                             </div>
                         </section>
 
@@ -316,7 +292,8 @@
                             <div class="history__inner">
                                 <div class="history__content">
                                     <h2 class="title mb">Elmos Werkzeuge GmbH - компания с историей</h2>
-
+                                    <img class="history__img" src="images/history-img.webp" loading="lazy" alt="history img">
+                                    <a class="btn btn_outline" href="#">Подробнее о компании</a>
                                 </div>
                                 <div class="history__boxes">
                                     <div class="history__box">
@@ -341,6 +318,15 @@
                                     <h2 class="title">Нужна консультация? Задайте вопрос прямо сейчас!</h2>
                                     <p class="consult__text">Заполните форму, мы свяжемся с вами и проконсультируем
                                         по всем вопросам</p>
+                                    <div class="socials">
+                                        <a class="socials__item" href="#">
+                                            <img src="images/tg.svg" alt="socials icon">
+                                        </a>
+
+                                        <a class="socials__item" href="#">
+                                            <img src="images/wh.svg" alt="socials icon">
+                                        </a>
+                                    </div>
                                 </div>
                                 <form class="form">
                                     <input type="text" name="fullname" placeholder="Ваше имя">
@@ -386,7 +372,7 @@
                                     <p class="features__text">Проектируем, собираем, программируем</p>
                                 </div>
 
-                                <img class="features__img" src="images/features-img.webp" loading="lazy" alt="features img">
+                                <img class="features__img" src="images/company-img-2.webp" loading="lazy" alt="features img">
                             </div>
                         </section>
 
@@ -398,24 +384,53 @@
 
                                 <div class="contact__content">
                                     <h2 class="title">Контакты</h2>
-                                    <p class="contact__text">Компания Elmos Werkzeuge GmbH вышла на немецкий рынок в
-                                        1984 году. </p>
-                                    <div class="contact__lines">
-                                        <div class="contact__line">
-                                            <img src="images/phone.svg" loading="lazy" alt="contact icon">
-                                            <a class="contact__bold" href="tel:+7(999)9999999">+7 (999) 999 99
-                                                99</a>
+
+                                    <div class="contact__main">
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Адрес склада и самовывоза </h4>
+                                            <div class="contact__line">
+                                                <img src="images/location.svg" loading="lazy" alt="contact icon">
+                                                <div class="contact__bold">г.Москва Ярославское шоссе 1с1</div>
+                                            </div>
                                         </div>
 
-                                        <div class="contact__line">
-                                            <img src="images/mail.svg" loading="lazy" alt="contact icon">
-                                            <a class="contact__bold" href="mailto:mygmail.com">mygmail.com</a>
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Режим работы</h4>
+                                            <div class="contact__line">
+                                                <img src="images/time.svg" loading="lazy" alt="contact icon">
+                                                <div class="contact__bold">пн-пт 9:00-16:00 <br>
+                                                    сб-вс выходной</div>
+                                            </div>
+
+                                            <div class="contact__warn"><span>Обратите внимание:</span>все посещения только при согласовании с менеджером.    </div>
                                         </div>
 
-                                        <div class="contact__line">
-                                            <img src="images/location.svg" loading="lazy" alt="contact icon">
-                                            <div class="contact__bold">Адрес который очень важен</div>
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Контактные данные</h4>
+                                            <div class="contact__line">
+                                                <img src="images/phone.svg" loading="lazy" alt="contact icon">
+                                                <a class="contact__bold" href="tel:+7(999)9999999">+7 (999) 999 99
+                                                    99</a>
+                                            </div>
                                         </div>
+
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Мессенджеры</h4>
+                                            <div class="contact__two">
+                                                <div class="contact__line">
+                                                    <img src="images/tgs.svg" loading="lazy" alt="contact icon">
+                                                    <a class="contact__bold" href="#">Telegram</a>
+                                                </div>
+
+                                                <div class="contact__line">
+                                                    <img src="images/whs.svg" loading="lazy" alt="contact icon">
+                                                    <a class="contact__bold" href="#">WhatsApp</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact__bottom">
+                                        Запрос на подбор комплектующих и оформление заказа можно отправлять на почту <a href="mailto:pneuvel@ya.ru">pneuvel@ya.ru</a>
                                     </div>
                                 </div>
                             </div>
@@ -573,6 +588,10 @@
 
             <a class="btn btn_red getModal" href="#modal">Отправить заявку</a>
         </div>
+    </div>
+
+    <div class="copied">
+        Скопирано!
     </div>
 
     <!-- === SCRIPTS === -->

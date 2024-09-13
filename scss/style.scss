@@ -32,16 +32,54 @@
 
 .header {
     margin-bottom: 15px;
+    background-color: $main;
+    color: #fff;
     &__top{
         padding: 20px 0 6px;
+        
     }
 
     &__search{
         flex: 1;
         display: flex;
         align-items: center;
+        position: relative;
         input{
-            padding-right: 40px;
+            padding-right: 100px;
+            background: #222728;
+            &:focus,
+            &:hover{
+                background: #222728;
+                border: 2px solid #C5D1D4;
+                color: #fff;
+                &::placeholder{
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &__close{
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        right: 80px;
+        display: none;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__open{
+        height: 25px;
+        width: 25px;
+        display: none;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
         }
     }
 
@@ -52,12 +90,15 @@
     }
 
     &__button{
-        background-color: $main;
-        height: 46px;
+        background-color: $blue;
+        height: 42px;
         width: 60px;
         border-radius: 6px;
         @extend %center;
-        margin-left: -25px;
+        position: absolute;
+        right: 2px;
+        top: 50%;
+        transform: translateY(-50%);
         transition: filter 0.1s ease-in;
         @media (any-hover: hover){
             &:hover{
@@ -83,18 +124,23 @@
     &__phone{
         font-size: 18px;
         font-weight: 700;
+        @extend %color;
+        @media (any-hover: hover){
+            &:hover{
+                color: $red;
+            }
+        }
     }
 
     &__time{
-        color: rgba(21, 74, 96, 0.5);
+        color: rgba(255, 255, 255, 0.5);
         font-size: 13px;
     }
 
     &__list{
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        gap: 12px;
+        gap: 50px;
         a{
             @extend %color;
             @media (any-hover: hover){
@@ -105,6 +151,62 @@
         }
     }
 
+    &__whole{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__other{
+        display: flex;
+        align-items: center;
+        gap: 17px;
+    }
+
+    &__mail{
+        font-weight: 600;
+        @extend %color;
+        @media (any-hover: hover){
+            &:hover{
+                color: $red;
+            }
+        }
+    }
+
+    &__cart{
+        height: 30px;
+        padding: 7px 8px;
+        border-radius: 100px;
+        border: 1px solid #222728;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        img{
+            width: 20px;
+            height: 18px;
+            object-fit: contain;
+        }
+
+        @media (any-hover: hover){
+            &:hover{
+                .header__badge{
+                    background-color: $blue;
+                }
+            }
+        }
+    }
+
+    &__badge{
+        height: 19px;
+        width: 19px;
+        border-radius: 50%;
+        color: #fff;
+        background-color: $red;
+        @extend %center;
+        font-size: 10px;
+        transition: all 0.1s;
+    }
+
     &__right{
         display: flex;
         align-items: center;
@@ -112,11 +214,8 @@
     }
 
     &__trigger{
-        background-color: $main;
         height: 40px;
-        border-radius: 4px;
-        padding: 5px 10px;
-        display: none;
+        display: none;  
         img{
             height: 100%;
             width: 100%;
@@ -131,6 +230,7 @@
     &__bottom{
         background-color: #E3EAEC;
         padding: 12px 0;
+        color: #222728;
     }
 
     &__btn{
@@ -311,23 +411,18 @@
 .brands{
     &__inner{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 15px;
     }
 
     &__item{
         border: 1px solid #c5d1d4;
         border-radius: 10px;
+        background: #f3f3f3;
         padding: 40px;
         @extend %center;
-        @media (any-hover: hover){
-        
-            &:hover{
-                .brands__img{
-                    filter: unset;
-                }
-            }
-        }
+        @extend %hover;
+        height: 170px;
     }
 
     &__three{
@@ -340,7 +435,6 @@
         height: 100%;
         width: 100%;
         object-fit: contain;
-        filter: brightness(0) saturate(100%) invert(21%) sepia(10%) saturate(7221%) hue-rotate(165deg) brightness(87%) contrast(84%);
     }
 }
 
@@ -394,6 +488,7 @@
         height: 300px;
         width: auto;
         object-fit: contain;
+        margin-left: 90px;
     }
 
     &__content{
@@ -443,6 +538,31 @@
     }
 }
 
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &__item{
+        border-radius: 50%;
+        background-color: $red;
+        @extend %center;
+        height: 35px;
+        width: 35px;
+        padding: 8px;
+        transition: all 0.1s;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+
+        @media (any-hover: hover){
+            &:hover{
+                background-color: $blue;
+            }
+        }
+    }
+}
+
 .consult{
     background-repeat: no-repeat;
     background-size: cover;
@@ -457,6 +577,7 @@
     z-index: 1;
     .btn{
         width: 100%;
+        margin-top: 0;
     }
 
     &__text{
@@ -471,7 +592,6 @@
     }
 
     input{
-        background: #17536b;
         border: none;
         &::placeholder{
             color: #c9c9c9;
@@ -521,12 +641,12 @@
     &__inner{
         display: grid;
         grid-template-columns: 1fr 0.9fr;
-        gap: 50px;
+        gap: 30px;
     }
 
     &__map{
         width: 100%;
-        height: 290px;
+        height: 100%;
         border-radius: 10px;
     }
 
@@ -534,19 +654,50 @@
         margin-bottom: 20px;
     }
 
-    &__lines{
-        margin-top: 25px;
+    &__main{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
         a{
             @extend %color;
             @media (any-hover: hover){
                 &:hover{
                     color: $red;
                 }
-            
             }
+        }
+    }
+
+    &__grey{
+        font-weight: 500;
+        font-size: 14px;
+        color: #98afb9;
+        text-transform: unset;
+        margin-bottom: 9px;
+    }
+
+    &__warn{
+        margin-top: 11px;
+        font-size: 14px;
+        font-weight: 500;
+        span{
+            color: $red;
+        }
+    }
+
+    &__two{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    &__bottom{
+        border-top: 1px solid #c5d1d4;
+        padding-top: 20px;
+        margin-top: 30px;
+        font-weight: 500;
+        a{
+            color: $red;
         }
     }
 
@@ -560,6 +711,7 @@
             width: 22px;
             object-fit: contain;
         }
+
     }
 }
 
@@ -576,7 +728,10 @@
         border-radius: 10px;
         overflow: hidden;
         &:nth-child(odd){
-            background-image: url('../images/company-bg.png');
+            background-image: url('../images/texts.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
     }
 
@@ -632,6 +787,7 @@
         border: 1px solid #c5d1d4;
         background: #f1f6f7;
         padding: 10px;
+        height: 200px;
         @extend %hover;
         img{
             height: 100%;
@@ -655,6 +811,13 @@
         gap: 12px;
         margin-bottom: 10px;
         font-size: 15px;
+        margin-top: 20px;   
+    }
+
+    &__minititle{
+        margin-bottom: 20px;
+        text-transform: unset;
+        font-weight: 500;
     }
 
     &__tabs{
@@ -672,21 +835,24 @@
         border-bottom: 2px solid transparent;
         padding-bottom: 20px;
         transition: all 0.2s;
+        flex-direction: column;
         @extend %hover;
+        gap: 10px;
         img{
             max-height: 65px;
             object-fit: contain;
             width: 80%;
+            flex: 1;
         }
 
         @media (any-hover: hover){
             &:hover{
-                border-color: $main;
+                border-color: $blue;
             }
         }
 
         &.active{
-            border-color: $main;
+            border-color: $blue;
         }
     }
     
@@ -695,6 +861,8 @@
         border-radius: 10px;
         background: #f1f6f7;
         padding: 20px 12px;
+        background: #f3f3f3;
+
         @media (any-hover: hover){
             &:hover{
                 .cards__name{
@@ -845,16 +1013,22 @@
 .info{
     &__head{
         display: grid;
-        grid-template-columns: 0.6fr 1fr 1fr;
+        grid-template-columns: 0.4fr 1fr;
         gap: 30px;
         padding-top: 32px;
-        align-items: center;
     }
+
+    &__reds{
+        color: $red;
+        margin-top: 10px;
+    }
+
+
 
     &__img{
         border: 0.48px solid #c5d1d4;
         border-radius: 5px;
-        background: #f1f6f7;
+        background: #f3f3f3;
         padding: 10px;
         height: 280px;
         width: 100%;
@@ -864,6 +1038,7 @@
     &__text{
         margin-top: 20px;
         font-weight: 500;
+        flex: 1;
     }
 
     &__list{
@@ -871,6 +1046,17 @@
         flex-direction: column;
         gap: 6px;
     }
+
+    &__count{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .btn{
+            padding: 0 20px;
+            height: 36px;
+        }
+    }
+
 
     &__acts{
         display: grid;
@@ -880,6 +1066,21 @@
         height: 30px;
         align-items: stretch;
         overflow: hidden;
+        min-width: 135px;
+    }
+
+    &__main{
+        padding: 30px 0 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__price{
+        font-weight: 500;
+        font-size: 18px;
+        color: $red;
+        margin-bottom: 30px;
+        margin-top: 16px;
     }
 
     &__number{
@@ -915,15 +1116,244 @@
             
             &:hover{
                 color: #fff;
-                background-color: $main;
+                background-color: $blue;
             }
         }
     }
 
 }
 
+.lines{
+    &__items{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__item{
+        border: 1px solid #c5d1d4;
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: 0.4fr 1fr 0.4fr;
+        gap: 15px;
+    }
+
+    &__main{
+        padding: 24px;
+    }
+
+    &__img{
+        background: #f3f3f3;
+        border: 0.48px solid #c5d1d4;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__acts{
+        padding: 25px;
+        border-left: 1px solid #c5d1d4;
+    }
+
+    &__btns{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn{
+        width: 100%;
+        font-size: 15px;
+        padding: 0 10px;
+        height: 35px;
+    }
+
+    &__price{
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__title{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+.control{
+    &__head{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 25px;
+    }
+
+    &__img{
+        height: 215px;
+        width: 215px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    &__main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text{
+        flex: 1;
+    }
+
+    &__boxes{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 11px;
+        margin-top: 20px;
+    }
+
+    &__box{
+        border-radius: 4px;
+        background-color: #F1F1F1;
+        padding: 9px;
+        font-weight: 500;
+    }
+
+    &__list{
+        padding-left: 18px;
+        list-style-type: disc;
+        margin: 12px 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .title{
+        margin-bottom: 20px;
+    }
+}
+
+.copied{
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: $blue;
+    color: #fff;
+    transition: all 0.2s linear;
+    transform: translateY(200%) translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    &.active{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+}
+
+.request{
+    &__inner{
+        color: #fff;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 50px 35px;
+        display: grid;
+        grid-template-areas: 'info info btn' 'stages stages stages' 'bottom bottom bottom';
+    }
+
+    .title{
+        margin-bottom: 16px;
+    }
+
+    &__info{
+        grid-area: info;
+    }
+
+    &__btn{
+        grid-area: btn;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-self: end;
+        padding: 0 20px;
+        img{
+            height: 20px;
+            width: 20px;
+            object-fit: contain;
+        }
+    }
+
+    &__bottom{
+        grid-area: bottom;
+    }
+
+    &__stages{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 35px;
+        grid-area: stages;
+    }
+
+    &__stage{
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    &__title{
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 40px;
+    }
+
+    &__bottom{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__grey{
+        border: 1px solid #717171;
+        border-radius: 6px;
+        padding: 16px 32px;
+        display: inline-flex;
+        color: #cbcbcb;
+        transition: all 0.2s;
+        width: fit-content;
+        @media (any-hover: hover){
+            &:hover{
+                color: #fff;
+                background-color: #717171;
+            }
+        }
+    }
+
+    &__mail{
+        font-size: 18px;
+        @extend %color;
+        @media (any-hover: hover){
+            &:hover{
+                color: $red;
+            }
+        }
+    }
+
+    &__number{
+        font-size: 60px;
+        color: rgba(#eee, 0.6);
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+    
+}
+
 .footer{
-    background-color: $text;
+    background-color: $main;
     color: #fff;
     padding: 50px 0 40px;
     &__head{
@@ -964,6 +1394,220 @@
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+    }
+}
+
+.cart{
+    .btn_outline{
+        height: 35px;
+        padding: 0 15px;
+    }
+
+    &__heading{
+        color: $red;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    &__left{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__checkboxes{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__checkbox{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+
+    &__edit{
+        font-size: 14px;
+        @extend %color;
+        @media (any-hover: hover){
+            &:hover{
+                color: $red;
+            }
+        
+        }
+    }
+
+    &__minititle{
+        text-transform: unset;
+    }
+
+    &__plain{
+        font-weight: 400;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        text-transform: unset;
+    }
+
+    &__picked{
+        padding: 17px 0;
+        border-top: 1px solid #c5d1d4;
+        border-bottom: 1px solid #c5d1d4;
+    }
+
+    &__wrapper{
+        padding: 20px 0;
+        select,
+        input{
+            border: 1px solid #c5d1d4;
+            background-color: #f7f7f7;
+        }
+    }
+
+    &__inputs{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        
+    }
+
+    .head{
+        padding-top: 30px;
+    }
+
+    &__inner{
+        display: grid;
+        grid-template-columns: 1fr 280px;
+        gap: 14px;
+    }
+
+    &__item{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        background: #f1f1f1;
+        border-radius: 4px;
+    }
+
+    &__items{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__remove{
+        position: absolute;
+        right: 5px;
+        top: 7px;
+        @media (any-hover: hover){
+            &:hover{
+                path{
+                    stroke: $red
+                }
+            }
+        
+        }
+    }
+
+    &__main{
+        position: relative;
+        padding: 25px 30px;
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__card{
+        border-radius: 4px;
+        background: #f1f1f1;
+        padding: 20px;
+        align-self: start;
+        .btn{
+            padding: 0 12px;
+            width: 100%;
+        }
+    }
+
+    &__info{
+        border-radius: 5px;
+        background: #f1f1f1;
+        padding: 12px 15px 20px;
+        align-self: start;
+    }
+
+    &__list{
+        color: rgba(21, 74, 96, 0.76);
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 10px;
+        a{
+            @extend %color;                                                                 
+            @media (any-hover: hover){
+                &:hover{
+                    color: $red;
+                }
+            
+            }
+        }
+    }
+
+    &__two{
+        padding: 30px 0 45px;
+        display: grid;
+        grid-template-columns: 230px 1fr;
+        gap: 16px;
+        iframe{
+            width: 100%;
+            height: 300px;
+        }
+    }
+
+    &__lines{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    &__grey{
+        color: rgba(21, 74, 96, 0.67);
+    }
+
+    &__line{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        justify-content: space-between;
+    }
+
+    &__bottom{
+        padding: 10px 0;
+        border-top: 1px solid #c5d1d4;
+        border-bottom: 1px solid #c5d1d4;
+    }
+
+    .form__policy{
+        font-size: 11px;
+        font-weight: 500;
+    }
+
+    &__img{
+        height: 90px;
+        width: 85px;
+        object-fit: contain;
+        border: 0.48px solid #c5d1d4;
+        border-radius: 5px;
+        background: #f3f3f3;
     }
 }
 

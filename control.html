@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="header__top splitter">
                     <a class="header__logolink" href="/">
-                        <img class="header__logo" src="images/logo.svg" loading="lazy" alt="logo">
+                        <img class="header__logo" src="images/logo-white.svg" loading="lazy" alt="logo">
                     </a>
 
                     <div class="header__content">
@@ -25,6 +25,9 @@
                             <input type="text" name="site_search" placeholder="Пластиковые трубопроводы">
                             <button class="header__button">
                                 <img src="images/search-icon.svg" loading="lazy" alt="search icon">
+                            </button>
+                            <button id="closeSearch" class="header__close">
+                                <img src="images/x-white.svg" loading="lazy" alt="search icon">
                             </button>
                         </div>
 
@@ -38,7 +41,11 @@
                                 <img src="images/catalog-icon.svg" loading="lazy" alt="catalog icon">
                             </a>
                         </div>
+
                     </div>
+                    <button id="openSearch" class="header__open">
+                        <img src="images/search-icon.svg" alt="search icon">
+                    </button>
                 </div>
             </div>
             <div class="header__bottom">
@@ -112,14 +119,23 @@
                                 </li>
                             </ul>
                         </div>
-                        <ul class="header__list">
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">Новости</a></li>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Сервис и поддержка</a></li>
-                            <li><a href="#">Склады и производство</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
+                        <div class="header__whole">
+                            <ul class="header__list">
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+
+                            <div class="header__other">
+                                <a class="header__mail" href="mailto:pneuvel@ya.ru">pneuvel@ya.ru</a>
+                                <a class="header__cart" href="#">
+                                    <img src="images/cart.svg" alt="cart">
+                                    <div class="header__badge">0</div>
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,153 +153,146 @@
                         <div class="breadcrumbs">
                             <div class="breadcrumbs__inner">
                                 <a class="breadcrumbs__link" href="#">Главная</a>
-                                <div class="breadcrumbs__current">O компании</div>
+                                <div class="breadcrumbs__current">Шкафы управления</div>
                             </div>
                         </div>
 
-                        <!-- === STAGES === -->
-                        <section class="stages spacing">
-                            <h2 class="title mb">О компании</h2>
-                            <div class="stages__inner">
-                                <div class="stages__item">
-                                    <div class="stages__content">
-                                        <h3 class="stages__number">1</h3>
-                                        <p class="stages__text">Компания Elmos Werkzeuge GmbH вышла на немецкий
-                                            рынок в 1984 году. Под брендом Elmos потребителю был представлен широкий
-                                            ассортимент инструментов — плиткорезы, фрезера, пилы, автомойки,
-                                            краскораспылители, электродрели и пр. Благодаря разнообразию и высокому
-                                            качеству продукции, основному акценту на разработке и создании
-                                            профессиональных моделей, компания достаточно быстро стала в один ряд с
-                                            ведущими конкурентно способными производителями.</p>
+                        <!-- === CONTROL === -->
+                        <section class="control spacing">
+                            <div class="control__head">
+                                <img class="control__img" src="images/control-img.webp" alt="control img">
+                                <div class="control__main">
+                                    <h2 class="title">Шкафы управления</h2>
+                                    <p class="control__text">Компания Elmos занимается разработкой и поставкой шкафов
+                                        управления для технологического оборудования и процессов, предлагая три типа
+                                        решений:</p>
+                                    <div class="control__boxes">
+                                        <div class="control__box">Электропневматические <br> шкафы</div>
+                                        <div class="control__box">Электрические <br> шкафы</div>
+                                        <div class="control__box">Пневматические <br> шкафы</div>
                                     </div>
-                                </div>
-
-                                <div class="stages__item">
-                                    <div class="stages__content">
-                                        <h3 class="stages__number">2</h3>
-                                        <p class="stages__text">Elmos Werkzeuge GmbH продолжила расширяться, открыв
-                                            филиалы в Словении (город Крань) под брендом Iskra ERO, в Южной Америке
-                                            под брендом Iskraemec и в Европе под брендом Perles. В настоящее время
-                                            значительная часть профессиональных инструментов на рынке представлена
-                                            под маркой Elmos.</p>
-                                    </div>
-
-
-                                </div>
-
-                                <div class="stages__item">
-                                    <div class="stages__content">
-                                        <h3 class="stages__number">3</h3>
-                                        <p class="stages__text">Продукция компании появилась на российском рынке в
-                                            2002 году. Сегодня Elmos предлагает широкий ассортимент техники для
-                                            бытового и профессионального использования, причем значительное
-                                            количество инструментов локализовано в России. Бренд Elmos ассоциируется
-                                            с долговечностью, безопасностью, надежностью и простотой.</p>
-                                    </div>
-                                </div>
-
-                                <div class="stages__item">
-                                    <div class="stages__content">
-                                        <h3 class="stages__number">4</h3>
-                                        <p class="stages__text">Компания осуществляет полный цикл производства, что
-                                            позволило ей выйти на рынок пневматики в 2020 году, начав производство
-                                            пневматических шкафов управления и медицинских консолей. Примером
-                                            является серийная панель КМ-НС-660, пользующаяся большим спросом. В 2022
-                                            году в компанию пришли специалисты из ведущих европейских пневматических
-                                            компаний, что значительно повысило компетенции Elmos в этой области. Это
-                                            позволило компании разработать собственную продукцию, предлагая клиентам
-                                            более выгодные решения и высокий стандарт качества.</p>
-                                    </div>
-                                    
                                 </div>
                             </div>
 
-                            <div class="stages__boxes">
-                                <a class="stages__box" href="images/company-1.webp" data-fslightbox="company">
-                                    <img src="images/company-1.webp" loading="lazy" alt="company img">
-                                </a>
+                            <div class="control__info mt">
+                                <p class="control__text">Внутри шкафа размещаются:</p>
+                                <ul class="control__list">
+                                    <li>Программируемый контроллер;</li>
+                                    <li>Электротехническое оборудование (пускатели, реле, автоматы защиты и т.д.);</li>
+                                    <li>Клеммники для подключения внешних электрических цепей;</li>
+                                    <li>Подготовка и распределение воздуха</li>
+                                </ul>
 
-                                <a class="stages__box" href="images/company-2.webp" data-fslightbox="company">
-                                    <img src="images/company-2.webp" loading="lazy" alt="company img">
-                                </a>
-
-                                <a class="stages__box" href="images/company-3.webp" data-fslightbox="company">
-                                    <img src="images/company-3.webp" loading="lazy" alt="company img">
-                                </a>
+                                <p class="control__text">Компания Elmos предлагает надежные и высококачественные решения
+                                    для управления технологическими процессами. Наши шкафы управления спроектированы с
+                                    учетом всех требований и особенностей конкретного заказчика, обеспечивая
+                                    максимальную эффективность и надежность. Внедрение наших систем управления
+                                    способствует автоматизации и оптимизации производственных процессов, что помогает
+                                    предприятиям достигать своих целей и повышать общую производительность.</p>
                             </div>
                         </section>
 
-                        <!-- === FEATURES === -->
-                        <section class="features spacing">
-                            <h2 class="title mb">Наши преимущества</h2>
-                            <div class="features__inner">
-                                <div class="features__item">
-                                    <img class="features__icon" src="images/features-1.svg" loading="lazy" alt="features icon">
-                                    <p class="features__text">Оперативность
-                                        и ответсвенность</p>
+                        <!-- === REQUEST === -->
+                        <section class="request topline spacing">
+                            <div class="request__inner" style="background-image: url(images/request-bg.webp);">
+                                <div class="request__info">
+                                    <h2 class="title">Оставить заявку на разработку</h2>
+                                    <p class="request__text">Вы можете отправить запрос на проработку следующим
+                                        способом:</p>
                                 </div>
 
-                                <div class="features__item">
-                                    <img class="features__icon" src="images/features-2.svg" loading="lazy" alt="features icon">
-                                    <p class="features__text">Работаем по договору</p>
+                                <a class="request__btn btn btn_red" href="#" download="images/company-img.webp">
+                                    Скачать опросный лист
+                                    <img src="images/download.svg" alt="download icon">
+                                </a>
+
+                                <div class="request__stages">
+                                    <div class="request__stage">
+                                        <div class="request__number">1</div>
+                                        <p class="request__text">заполнить и отправить нам опросный лист</p>
+                                    </div>
+
+                                    <div class="request__stage">
+                                        <div class="request__number">2</div>
+                                        <p class="request__text">отправить свое составленное ТЗ</p>
+                                    </div>
+
+                                    <div class="request__stage">
+                                        <div class="request__number">3</div>
+                                        <p class="request__text">в случае стандартного шкафа, отправить кодировку шкафа,
+                                            либо письменное описание</p>
+                                    </div>
                                 </div>
 
-                                <div class="features__item">
-                                    <img class="features__icon" src="images/features-3.svg" loading="lazy" alt="features icon">
-                                    <p class="features__text">Проектируем новые
-                                        и восстанавливаем старые пневматические системы</p>
+                                <div class="request__bottom">
+                                    <h3 class="request__title">Все запросы принимаются на почту:</h3>
+                                    <a class="request__mail" href="mailto:pneuvel@ya.ru">pneuvel@ya.ru</a>
+                                    <a class="request__grey" href="#">Скопировать почту</a>
                                 </div>
-
-                                <div class="features__item">
-                                    <img class="features__icon" src="images/features-4.svg" loading="lazy" alt="features icon">
-                                    <p class="features__text">Только качественные комплектующие</p>
-                                </div>
-
-                                <div class="features__item">
-                                    <img class="features__icon" src="images/features-5.svg" loading="lazy" alt="features icon">
-                                    <p class="features__text">Строгий контроль качества сборки</p>
-                                </div>
-
-                                <div class="features__item">
-                                    <img class="features__icon" src="images/features-6.svg" loading="lazy" alt="features icon">
-                                    <p class="features__text">Проектируем, собираем, программируем</p>
-                                </div>
-
-                                <img class="features__img" src="images/company-img-2.webp" loading="lazy" alt="features img">
                             </div>
                         </section>
 
                         <!-- === CONTACT === -->
-                        <section class="contact spacing">
+                        <section class="contact spacing topline">
                             <div class="contact__inner">
                                 <!-- === КАРТА === -->
                                 <div id="contactMap" class="contact__map"></div>
 
                                 <div class="contact__content">
                                     <h2 class="title">Контакты</h2>
-                                    <p class="contact__text">Компания Elmos Werkzeuge GmbH вышла на немецкий рынок в
-                                        1984 году. </p>
-                                    <div class="contact__lines">
-                                        <div class="contact__line">
-                                            <img src="images/phone.svg" loading="lazy" alt="contact icon">
-                                            <a class="contact__bold" href="tel:+7(999)9999999">+7 (999) 999 99
-                                                99</a>
+
+                                    <div class="contact__main">
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Адрес склада и самовывоза </h4>
+                                            <div class="contact__line">
+                                                <img src="images/location.svg" loading="lazy" alt="contact icon">
+                                                <div class="contact__bold">г.Москва Ярославское шоссе 1с1</div>
+                                            </div>
                                         </div>
 
-                                        <div class="contact__line">
-                                            <img src="images/mail.svg" loading="lazy" alt="contact icon">
-                                            <a class="contact__bold" href="mailto:mygmail.com">mygmail.com</a>
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Режим работы</h4>
+                                            <div class="contact__line">
+                                                <img src="images/time.svg" loading="lazy" alt="contact icon">
+                                                <div class="contact__bold">пн-пт 9:00-16:00 <br>
+                                                    сб-вс выходной</div>
+                                            </div>
+
+                                            <div class="contact__warn"><span>Обратите внимание:</span>все посещения
+                                                только при согласовании с менеджером. </div>
                                         </div>
 
-                                        <div class="contact__line">
-                                            <img src="images/location.svg" loading="lazy" alt="contact icon">
-                                            <div class="contact__bold">Адрес который очень важен</div>
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Контактные данные</h4>
+                                            <div class="contact__line">
+                                                <img src="images/phone.svg" loading="lazy" alt="contact icon">
+                                                <a class="contact__bold" href="tel:+7(999)9999999">+7 (999) 999 99
+                                                    99</a>
+                                            </div>
                                         </div>
+
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Мессенджеры</h4>
+                                            <div class="contact__two">
+                                                <div class="contact__line">
+                                                    <img src="images/tgs.svg" loading="lazy" alt="contact icon">
+                                                    <a class="contact__bold" href="#">Telegram</a>
+                                                </div>
+
+                                                <div class="contact__line">
+                                                    <img src="images/whs.svg" loading="lazy" alt="contact icon">
+                                                    <a class="contact__bold" href="#">WhatsApp</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact__bottom">
+                                        Запрос на подбор комплектующих и оформление заказа можно отправлять на почту <a
+                                            href="mailto:pneuvel@ya.ru">pneuvel@ya.ru</a>
                                     </div>
                                 </div>
                             </div>
                         </section>
-
                     </div>
                 </div>
             </div>
@@ -360,7 +369,7 @@
             </div>
 
             <ul class="mobile-menu__list">
-                
+
                 <li><a href="#">Главная</a></li>
                 <li>
                     <a href="#">Каталог</a>
@@ -438,6 +447,14 @@
 
             <a class="btn btn_red getModal" href="#modal">Отправить заявку</a>
         </div>
+    </div>
+
+    <div class="copied">
+        Скопирано!
+    </div>
+
+    <div class="copied">
+        Скопирано!
     </div>
 
     <!-- === SCRIPTS === -->

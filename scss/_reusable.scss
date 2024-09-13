@@ -10,6 +10,7 @@
 .breadcrumbs {
     padding: 30px 0 30px;
     font-weight: 500;
+    font-size: 14px;
 
     &__inner {
         display: flex;
@@ -72,7 +73,6 @@
             border-radius: 4px;
             transition: all 0.2s;
             @extend %center;
-
             a {
                 @extend %center;
                 border-radius: inherit;
@@ -81,12 +81,18 @@
             }
         }
 
+        .current{
+            background-color: $blue;
+            color: #fff;
+        }
+
         .current,
         li:has(:not(.dots)){
+            
             @media (any-hover: hover){
             
                 &:hover {
-                    background-color: $main;
+                    background-color: $blue;
                     color: #fff;
         
                     svg {
@@ -100,28 +106,41 @@
 
 .tabs {
     margin: 20px 0 40px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
     padding-top: 10px;
-
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
     &__item {
         padding: 20px 24px;
         color: $text;
         @extend %hover;
         @extend %center;
-        color: $main;
+        color: #154a60;
         font-size: 20px;
         text-transform: uppercase;
         font-weight: 500;
         border-bottom: 1px solid #c5d1d4;
         transition: all 0.1s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+        color: rgba(21, 74, 96, 0.63);
+        img{
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+        }
         @media (any-hover: hover){
             &:hover {
-                border-color: $main;
+                border-color: #154a60;
             }
         }
         &.active {
-            border-color: $main;
+            border-color: #154a60;
+            color: $text;
         }
     }
 
@@ -199,14 +218,32 @@
         font-weight: 600;
     }
 
+    &_redline {
+        border: 1px solid $red;
+        color: $red;
+        font-weight: 600;
+        @media (any-hover: hover){
+            
+            &:hover {
+                background-color: $red;
+                color: #fff;
+            }
+        }
+
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
+
     &_outline {
-        border: 1px solid $main;
-        color: $main;
+        border: 1px solid $blue;
+        color: $blue;
         font-weight: 500;
         @media (any-hover: hover){
             
             &:hover {
-                background-color: $main;
+                background-color: $blue;
                 color: #fff;
             }
         }

@@ -1,6 +1,7 @@
 // VARS
 $text: #154A60;
-$main: #225F78;
+$blue: #225F78;
+$main: #222728;
 $grey: #6E7C87;
 $red: #E30613;
 // EXTENDS
@@ -130,13 +131,14 @@ $red: #E30613;
 
 
 select{
-    padding-right: 15px;
+    width: 100%;
+    padding: 0 30px 0 15px;
     -moz-appearance: none;
     appearance: none;
     -webkit-appearance: none;
     background-image: url('../images/select-down.svg');
     background-repeat: no-repeat;
-    background-position: right 0px center;
+    background-position: right 15px center;
     background-size: 10px;
     outline: none;
     color: #154a60;
@@ -148,14 +150,16 @@ select{
 input[type="checkbox"] {
   position: relative;
   cursor: pointer;
-  height: 22px;
-  width: 22px;
-  border-radius: 4px;
+  height: 16px;
+  width: 16px;
+  border-radius: 2px;
   border: none;
   -webkit-appearance: none;
   appearance: none;
   outline: none;
   flex-shrink: 0;
+  border: 1px solid #c5d1d4;
+
   &::after {
     content: '';
     height: 100%;
@@ -165,15 +169,15 @@ input[type="checkbox"] {
     background-position: center center;
     background-size: 70%;
     position: absolute;
-    background-color: $red;
+    background-color: #f7f7f7;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-color: $grey;
     transition: all 0.1s ease-in;
   }
 
   &:checked {
+    border: 1px solid $red;
     &::after {
       background-color: $red;
       background-image: url('../images/check-icon.svg');

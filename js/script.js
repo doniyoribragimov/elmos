@@ -1,11 +1,13 @@
 jQuery(document).ready(function ($) {
-    $('.info__plus').on('click', function(){
+    $('.info__plus').on('click', function(e){
+        e.preventDefault();
         let initialNum = parseInt($(this).closest('.info__acts').find('.info__number').text());
         initialNum++;
         $(this).closest('.info__acts').find('.info__number').text(initialNum);
     });
     
-    $('.info__minus').on('click', function(){
+    $('.info__minus').on('click', function(e){
+        e.preventDefault();
         let initialNum = parseInt($(this).closest('.info__acts').find('.info__number').text());
         initialNum = Math.max(0, initialNum - 1);
         $(this).closest('.info__acts').find('.info__number').text(initialNum);
@@ -16,6 +18,15 @@ jQuery(document).ready(function ($) {
         var isChecked = $(this).prop('checked');
         var $submitButton = $(this).closest('.form').find('button[type="submit"]');
         $submitButton.prop('disabled', !isChecked);
+    });
+
+
+    $('#openSearch').on('click', function(){
+        $('.header__search').addClass('active');
+    });
+
+    $('#closeSearch').on('click', function(){
+        $('.header__search').removeClass('active');
     });
 
     // ДЛЯ ОТКРЫТИЯ МОДАЛКИ
@@ -180,7 +191,7 @@ createAccordion('.mobile-menu__list img', '.mobile-menu__list ul', false)
 // ДЛЯ ОТОБРАЖЕНИЯ КАРТЫ
 function init() {
     let myMap = new ymaps.Map('contactMap', {
-        center: [55.755863, 37.617700],
+        center: [55.850601, 37.673241],
         zoom: 15,
         controls: []
     }, {
@@ -189,7 +200,7 @@ function init() {
     myplacemark = new ymaps.GeoObject({
         geometry: {
             type: "Point",
-            coordinates: [55.755863, 37.617700]
+            coordinates: [55.850601, 37.673241]
         },
         properties: {
             hintContent: 'Москва'
@@ -205,6 +216,26 @@ function init() {
 let maps = document.querySelectorAll("#contactMap");
 if (maps.length > 0) {
     ymaps.ready(init);
+}
+
+
+
+let copyBtn = document.querySelector('.request__grey')
+
+window.onload = function(){
+    if(copyBtn){
+        let copied = document.querySelector('.copied')
+        copyBtn.addEventListener('click', function(e){
+            e.preventDefault();
+            let copyLink = document.querySelector('.request__mail').innerText;
+            navigator.clipboard.writeText(copyLink);
+            copied.classList.add('active')
+            setInterval(function(){
+                copied.classList.remove('active')
+            }, 3000)
+        })
+
+    }
 }
 
 // SWIPER слайдеры

@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="header__top splitter">
                     <a class="header__logolink" href="/">
-                        <img class="header__logo" src="images/logo.svg" loading="lazy" alt="logo">
+                        <img class="header__logo" src="images/logo-white.svg" loading="lazy" alt="logo">
                     </a>
 
                     <div class="header__content">
@@ -25,6 +25,9 @@
                             <input type="text" name="site_search" placeholder="Пластиковые трубопроводы">
                             <button class="header__button">
                                 <img src="images/search-icon.svg" loading="lazy" alt="search icon">
+                            </button>
+                            <button id="closeSearch" class="header__close">
+                                <img src="images/x-white.svg" loading="lazy" alt="search icon">
                             </button>
                         </div>
 
@@ -38,7 +41,11 @@
                                 <img src="images/catalog-icon.svg" loading="lazy" alt="catalog icon">
                             </a>
                         </div>
+
                     </div>
+                    <button id="openSearch" class="header__open">
+                        <img src="images/search-icon.svg" alt="search icon">
+                    </button>
                 </div>
             </div>
             <div class="header__bottom">
@@ -112,14 +119,23 @@
                                 </li>
                             </ul>
                         </div>
-                        <ul class="header__list">
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">Новости</a></li>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Сервис и поддержка</a></li>
-                            <li><a href="#">Склады и производство</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
+                        <div class="header__whole">
+                            <ul class="header__list">
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+
+                            <div class="header__other">
+                                <a class="header__mail" href="mailto:pneuvel@ya.ru">pneuvel@ya.ru</a>
+                                <a class="header__cart" href="#">
+                                    <img src="images/cart.svg" alt="cart">
+                                    <div class="header__badge">0</div>
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,115 +153,104 @@
                         <div class="breadcrumbs">
                             <div class="breadcrumbs__inner">
                                 <a class="breadcrumbs__link" href="#">Главная</a>
-                                <div class="breadcrumbs__current">Датчики и реле</div>
+                                <div class="breadcrumbs__current">Корзина</div>
                             </div>
                         </div>
 
-                        <!-- === CARDS === -->
-                        <section class="cards spacing">
-                            <h2 class="title mb">Датчики и реле</h2>
-                            <div class="cards__main topline">
-                                <div class="head mb">
-                                    <div class="head__left">
-                                        <img src="images/cards-1.svg" loading="lazy" alt="cards logo">
-                                        <h3 class="head__name">Датчики и релле <br> Camozzi</h3>
-                                    </div>
-                                    <a class="btn btn_outline" href="#">Смотреть все</a>
-                                </div>
-
-                                <div class="cards__inner">
-                                    <a class="cards__item" href="#">
-                                        <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
-                                        <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
-                                        <div class="cards__bottom">
-                                            <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
-                                            <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
-                                        </div>
-                                    </a>
-
-                                    <a class="cards__item" href="#">
-                                        <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
-                                        <h3 class="cards__name">Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Sequi excepturi quasi temporibus, rerum voluptatibus in maxime
-                                            nobis. Temporibus?</h3>
-                                        <div class="cards__bottom">
-                                            <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
-                                            <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
-                                        </div>
-                                    </a>
-
-                                    <a class="cards__item" href="#">
-                                        <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
-                                        <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
-                                        <div class="cards__bottom">
-                                            <div class="cards__details">Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Ullam, non itaque quae cupiditate ducimus ab
-                                                minima possimus doloribus at? Laboriosam!</div>
-                                            <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
-                                        </div>
-                                    </a>
-
-                                    <a class="cards__item" href="#">
-                                        <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
-                                        <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
-                                        <div class="cards__bottom">
-                                            <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
-                                            <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
-                                        </div>
-                                    </a>
-                                </div>
+                        <!-- === CART === -->
+                        <section class="cart topline spacing">
+                            <div class="head mb">
+                                <h2 class="title">Корзина</h2>
+                                <a class="btn btn_outline" href="#">Очистить корзину</a>
                             </div>
 
-                            <div class="cards__main topline">
-                                <div class="head mb">
-                                    <div class="head__left">
-                                        <img src="images/cards-2.svg" loading="lazy" alt="cards logo">
-                                        <h3 class="head__name">Датчики и релле <br> Festo</h3>
+                            <div class="cart__inner">
+                                <div class="cart__items">
+                                    <div class="cart__item">
+                                        <img class="cart__img" src="images/card-img.webp" alt="cart img">
+                                        <div class="cart__main">
+                                            <button class="cart__remove">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2 4H3.33333H14" stroke="#99AFB7" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M5.33398 3.99992V2.66659C5.33398 2.31296 5.47446 1.97382 5.72451 1.72378C5.97456 1.47373 6.3137 1.33325 6.66732 1.33325H9.33398C9.68761 1.33325 10.0267 1.47373 10.2768 1.72378C10.5268 1.97382 10.6673 2.31296 10.6673 2.66659V3.99992M12.6673 3.99992V13.3333C12.6673 13.6869 12.5268 14.026 12.2768 14.2761C12.0267 14.5261 11.6876 14.6666 11.334 14.6666H4.66732C4.3137 14.6666 3.97456 14.5261 3.72451 14.2761C3.47446 14.026 3.33398 13.6869 3.33398 13.3333V3.99992H12.6673Z"
+                                                        stroke="#99AFB7" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M6.66602 7.33325V11.3333" stroke="#99AFB7"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M9.33398 7.33325V11.3333" stroke="#99AFB7"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+    
+                                            <div class="cart__name">Адаптер для датчика S-CST-45N1</div>
+                                            <div class="info__acts">
+                                                <button class="info__but info__minus">-</button>
+                                                <div class="info__number">0</div>
+                                                <button class="info__but info__plus">+</button>
+                                            </div>
+                                            <h4 class="cart__price">2 785 ₽</h4>
+                                        </div>
                                     </div>
-                                    <a class="btn btn_outline" href="#">Смотреть все</a>
+
+                                    <div class="cart__item">
+                                        <img class="cart__img" src="images/card-img.webp" alt="cart img">
+                                        <div class="cart__main">
+                                            <button class="cart__remove">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M2 4H3.33333H14" stroke="#99AFB7" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M5.33398 3.99992V2.66659C5.33398 2.31296 5.47446 1.97382 5.72451 1.72378C5.97456 1.47373 6.3137 1.33325 6.66732 1.33325H9.33398C9.68761 1.33325 10.0267 1.47373 10.2768 1.72378C10.5268 1.97382 10.6673 2.31296 10.6673 2.66659V3.99992M12.6673 3.99992V13.3333C12.6673 13.6869 12.5268 14.026 12.2768 14.2761C12.0267 14.5261 11.6876 14.6666 11.334 14.6666H4.66732C4.3137 14.6666 3.97456 14.5261 3.72451 14.2761C3.47446 14.026 3.33398 13.6869 3.33398 13.3333V3.99992H12.6673Z"
+                                                        stroke="#99AFB7" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M6.66602 7.33325V11.3333" stroke="#99AFB7"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M9.33398 7.33325V11.3333" stroke="#99AFB7"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+    
+                                            <div class="cart__name">Адаптер для датчика S-CST-45N1</div>
+                                            <div class="info__acts">
+                                                <button class="info__but info__minus">-</button>
+                                                <div class="info__number">0</div>
+                                                <button class="info__but info__plus">+</button>
+                                            </div>
+                                            <h4 class="cart__price">2 785 ₽</h4>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="cards__inner">
-                                    <a class="cards__item" href="#">
-                                        <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
-                                        <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
-                                        <div class="cards__bottom">
-                                            <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
-                                            <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                <form class="cart__card form">
+                                    <h3 class="cart__title">Сумма заказа</h3>
+                                    <div class="cart__lines">
+                                        <div class="cart__line">
+                                            <div class="cart__grey">Кол-во товаров</div>
+                                            <div class="cart__value">1 шт.</div>
                                         </div>
-                                    </a>
 
-                                    <a class="cards__item" href="#">
-                                        <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
-                                        <h3 class="cards__name">Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Sequi excepturi quasi temporibus, rerum voluptatibus in maxime
-                                            nobis. Temporibus?</h3>
-                                        <div class="cards__bottom">
-                                            <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
-                                            <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                        <div class="cart__line">
+                                            <div class="cart__grey">Сумма</div>
+                                            <div class="cart__value">2 758 ₽</div>
                                         </div>
-                                    </a>
+                                    </div>
 
-                                    <a class="cards__item" href="#">
-                                        <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
-                                        <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
-                                        <div class="cards__bottom">
-                                            <div class="cards__details">Lorem ipsum dolor sit amet consectetur
-                                                adipisicing elit. Ullam, non itaque quae cupiditate ducimus ab
-                                                minima possimus doloribus at? Laboriosam!</div>
-                                            <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
+                                    <div class="cart__bottom">
+                                        <div class="cart__line">
+                                            <div class="cart__grey">Итого</div>
+                                            <strong class="cart__value">2 785 ₽</strong>
                                         </div>
-                                    </a>
+                                    </div>
 
-                                    <a class="cards__item" href="#">
-                                        <img class="cards__img" src="images/card-img.webp" loading="lazy" alt="cards img">
-                                        <h3 class="cards__name">Магнитные датчики положения Camozzi</h3>
-                                        <div class="cards__bottom">
-                                            <div class="cards__details">Серии CST-CSV-CSH, CSB-CSC-CSD, CSG</div>
-                                            <img class="cards__icon" src="images/arrow-right.svg" loading="lazy" alt="arrow icon">
-                                        </div>
-                                    </a>
-                                </div>
+                                    <button class="btn btn_red" type="submit"">Оформить заказ</button>
+                                    <label class=" form__confirm">
+                                        <input type="checkbox" checked>
+                                        <span class="form__policy">
+                                            Я соглашаюсь с <a href="#">Политикой конфиденциальности</a>
+                                        </span>
+                                        </label>
+                                </form>
                             </div>
                         </section>
 
@@ -258,30 +263,59 @@
 
                                 <div class="contact__content">
                                     <h2 class="title">Контакты</h2>
-                                    <p class="contact__text">Компания Elmos Werkzeuge GmbH вышла на немецкий рынок в
-                                        1984 году. </p>
-                                    <div class="contact__lines">
-                                        <div class="contact__line">
-                                            <img src="images/phone.svg" loading="lazy" alt="contact icon">
-                                            <a class="contact__bold" href="tel:+7(999)9999999">+7 (999) 999 99
-                                                99</a>
+
+                                    <div class="contact__main">
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Адрес склада и самовывоза </h4>
+                                            <div class="contact__line">
+                                                <img src="images/location.svg" loading="lazy" alt="contact icon">
+                                                <div class="contact__bold">г.Москва Ярославское шоссе 1с1</div>
+                                            </div>
                                         </div>
 
-                                        <div class="contact__line">
-                                            <img src="images/mail.svg" loading="lazy" alt="contact icon">
-                                            <a class="contact__bold" href="mailto:mygmail.com">mygmail.com</a>
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Режим работы</h4>
+                                            <div class="contact__line">
+                                                <img src="images/time.svg" loading="lazy" alt="contact icon">
+                                                <div class="contact__bold">пн-пт 9:00-16:00 <br>
+                                                    сб-вс выходной</div>
+                                            </div>
+
+                                            <div class="contact__warn"><span>Обратите внимание:</span>все посещения
+                                                только при согласовании с менеджером. </div>
                                         </div>
 
-                                        <div class="contact__line">
-                                            <img src="images/location.svg" loading="lazy" alt="contact icon">
-                                            <div class="contact__bold">Адрес который очень важен</div>
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Контактные данные</h4>
+                                            <div class="contact__line">
+                                                <img src="images/phone.svg" loading="lazy" alt="contact icon">
+                                                <a class="contact__bold" href="tel:+7(999)9999999">+7 (999) 999 99
+                                                    99</a>
+                                            </div>
                                         </div>
+
+                                        <div class="contact__item">
+                                            <h4 class="contact__grey">Мессенджеры</h4>
+                                            <div class="contact__two">
+                                                <div class="contact__line">
+                                                    <img src="images/tgs.svg" loading="lazy" alt="contact icon">
+                                                    <a class="contact__bold" href="#">Telegram</a>
+                                                </div>
+
+                                                <div class="contact__line">
+                                                    <img src="images/whs.svg" loading="lazy" alt="contact icon">
+                                                    <a class="contact__bold" href="#">WhatsApp</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact__bottom">
+                                        Запрос на подбор комплектующих и оформление заказа можно отправлять на почту <a
+                                            href="mailto:pneuvel@ya.ru">pneuvel@ya.ru</a>
                                     </div>
                                 </div>
                             </div>
                         </section>
-
-
                     </div>
                 </div>
             </div>
@@ -436,6 +470,10 @@
 
             <a class="btn btn_red getModal" href="#modal">Отправить заявку</a>
         </div>
+    </div>
+
+    <div class="copied">
+        Скопирано!
     </div>
 
     <!-- === SCRIPTS === -->
